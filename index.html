@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="utf-8">
-<title>Examen final</title>
-<link rel="stylesheet" href="css/styles.css?v=1.0">
-<script src="js/clients.js"></script>
-<script src="js/prets.js"></script>
-<script src="js/GestionClients.class.js"></script>
-<script>
-  window.addEventListener("load", () => {
-    new GestionClients(clients, prets);
-  });
-</script>
-</head>
-<body>
-  <template id="modeleClient">
-    <p><span>Nom:</span><span>{nom}, {prenom}</span></p>
-    <p><span>Date de naissance:</span><span>{date_naissance}</span></p>
-    <p><span>Téléphone:</span><span>{tel}</span></p>
-  </template>
-  <template id="modelePret">
-    <article>
-      <h2>Prêt numéro {id_pret}</h2>
-      <p><span>Montant:</span><span>{montant} $</span></p>
-      <p><span>taux:</span><span>{taux} %</span></p>
-      <p><span>Banque:</span><span>{banque}</span></p>
-    </article>
-    <hr>    
-  </template>
+  <head>
+    <meta charset="utf-8" />
+    <title>Examen final</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.02" />
+    <script src="js/clients.js"></script>
+    <script src="js/prets.js"></script>
+    <script src="js/GestionClients.class.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        new GestionClients(clients, prets);
+      });
+    </script>
+  </head>
+  <body>
+    <template id="modeleClient">
+      <p><span>Nom:</span><span>{nom}, {prenom}</span></p>
+      <p><span>Date de naissance:</span><span>{date_naissance}</span></p>
+      <p><span>Téléphone:</span><span>{tel}</span></p>
+    </template>
+    <template id="modelePret">
+      <article>
+        <h2>Prêt numéro {id_pret}</h2>
+        <p><span>Montant:</span><span>{montant} $</span></p>
+        <p><span>taux:</span><span>{taux} %</span></p>
+        <p><span>Banque:</span><span>{banque}</span></p>
+      </article>
+      <hr />
+    </template>
 
-  <main>
-    <label>Client :</label>
-    <select id="selectClient">
-      <option>Sélectionnez un client</option>
-    </select>
-    <div id="wrapper">
-      <section id="client"></section>
-      <section id="prets"></section>     
-    </div>
-  </main>	
-</body>
+    <main>
+      <label>Client :</label>
+      <select id="selectClient">
+        <option>Sélectionnez un client</option>
+      </select>
+      <div id="wrapper">
+        <section id="client"></section>
+        <section id="prets"></section>
+      </div>
+    </main>
+  </body>
 </html>

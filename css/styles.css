@@ -13,11 +13,11 @@ select {
 }
 
 #wrapper {
-  display : flex;
+  display: flex;
   width: 0;
   margin-top: 25px;
   overflow: hidden;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 #wrapper.voir {
@@ -28,6 +28,12 @@ select {
 #client {
   width: 250px;
   margin-right: 100px;
+}
+
+.prets-box {
+  padding: 0px 30px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -44,5 +50,34 @@ span {
 }
 
 p span:last-of-type {
-  color:dodgerblue;
+  color: dodgerblue;
+}
+/* Animations*/
+.apparait {
+  animation-name: opacity;
+  animation-duration: 600ms;
+}
+.apparait-move {
+  animation-name: slide;
+  animation-duration: 600ms;
+  animation-delay: 500ms;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
